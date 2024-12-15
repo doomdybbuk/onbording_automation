@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Candidate List{% endblock %}
+
+{% block content %}
+    <h2>Candidate List</h2>
+    <ul>
+        <li><a href="{% url 'candidate-detail' id=1 %}">Candidate 1</a></li>
+        <li><a href="{% url 'candidate-detail' id=2 %}">Candidate 2</a></li>
+    </ul>
+{% endblock %}

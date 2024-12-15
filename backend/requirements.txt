@@ -1,0 +1,10 @@
+Django==4.2
+djangorestframework==3.14
+psycopg2==2.9.6
+django-cors-headers==3.13.0
+drf-yasg==1.21.4
+Pillow==10.0.0
+pytesseract==0.3.10
+celery==5.2.7
+redis==4.6.0
+requests==2.31.0

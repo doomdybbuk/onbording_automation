@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+main {
+    padding: 1em;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}

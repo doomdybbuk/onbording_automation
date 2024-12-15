@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Upload Form{% endblock %}
+{% block content %}
+    <h2>Upload Candidate Forms</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file">Select Files:</label>
+        <input type="file" id="file" name="files" multiple>
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if message %}
+        <p style="color:green">{{ message }}</p>
+    {% endif %}
+    {% if error %}
+        <p style="color:red">{{ error }}</p>
+    {% endif %}
+
+    <!-- Links to Candidates -->
+    <h3>Uploaded Forms</h3>
+    {% if uploaded_files_links %}
+        <ul>
+            {% for file in uploaded_files_links %}
+                <li>
+                    <a href="{{ file.file_url }}" target="_blank">{{ file.file_name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <h3>Candidate Records</h3>
+    <a href="{{ candidate_list_url }}">View Candidate List</a>
+{% endblock %}
